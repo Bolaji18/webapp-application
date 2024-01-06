@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'home2b.wsgi.application'
+WSGI_APPLICATION = 'bolajiolu.wsgi.application'
 
 
 # Database
