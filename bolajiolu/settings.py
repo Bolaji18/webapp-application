@@ -129,16 +129,16 @@ LOGIN_URL = 'log'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 LOGOUT_URL = reverse_lazy('logout')
-STATIC_URL = '/static/'
+STATIC_URL = '/static'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Base url to serve media files
-MEDIA_URL = '/images/'
+MEDIA_URL = '/images'
 
 # Path where media is stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-MEDIA_URL = '/images/'
+MEDIA_URL = '/images'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
