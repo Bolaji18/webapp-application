@@ -1,0 +1,548 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="">
+
+  <title> TrustAllianceNG </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+     <style>
+        form{
+            width:auto;
+        }
+
+         h2 {
+
+            text-align: center;
+            color: #333;
+
+        }
+
+        label {
+              display: block;
+              color: #666;
+              font-size: 18px;
+        	  margin-top: 30px;
+              padding-right: 20px;
+              float:none;
+        }
+
+         .search{
+             float:right;
+             width:30%;
+         }
+
+          .tests{
+               width:92%;
+               margin-top:30px;
+          }
+
+
+
+         .col-md-4{
+            display: block;
+            border: 1px #333 solid;
+        	color: #333;
+         	font-family: ;
+            font-size:15px;
+	        float:left;
+	        border-radius: 4px;
+        	background-color: rgb(240, 240, 240);
+         	max-height: 1000px;
+         	min-height:300px;
+         	min-width: 50%;
+        	margin-top: 5px;
+	        padding: 6px 5px 4px;
+        	padding-right:3px;
+        	margin-top:5px;
+        	margin-left:2%;
+        	margin-bottom:4%;
+        	justify-content:center;
+        }
+         .info_section
+       {
+           float:left;
+           width:100%;
+       }
+       .footer_section{
+           float:left;
+       }
+        .post {
+            background-color: rgb(240, 240, 240);
+            color: #333;
+            border: 1px #333 solid;
+            margin-left:6%;
+            border-radius: 0px;
+            cursor: pointer;
+            font-size: 12px;
+        	padding: 6px 5px 4px;
+        	margin-top: 20px;
+        	height: 46px;
+        	max-width: 120px;
+        	border: 1px #333 solid;
+        	border-radius: 2px;
+        	cursor: pointer;
+        }
+
+        .nav-item{
+            float:right;
+            margin-left:20px;
+
+        }
+        .active{
+            margin-left:250px;
+        }
+         .nav-item li a{
+           width:190px;
+           font-size:12px;
+         }
+
+
+        @media screen and (max-width: 601px) {
+            .tests{
+               width:100%;
+               margin-top:30px;
+          }
+             .search{
+             float:none;
+             width:auto;
+         }
+
+                .info_section
+       {
+           float:none;
+           width:100%;
+       }
+       .footer_section{
+           float:none;
+       }
+              .col-md-4{
+            display: block;
+            width: auto;
+        	color: #333;
+         	font-family:;
+   	        font-size: 14px;
+	        float:none;
+	        border-radius: 7px;
+        	background-color: rgb(240, 240, 240);
+        	border: 1px #333 solid;
+         	height: 100% auto;
+         	width:auto;
+        	margin-top: 2px;
+	        padding: 6px 5px 4px;
+        	padding-right:3px;
+        	margin-top:20px;
+        	margin-left:10px;
+        	margin-right:10px;
+        	margin-bottom:40px;
+        	justify-content:center;
+        	max-height: 1000px;
+         	min-height:150px;
+        }
+        .col-md-4 ol{
+            margin-left:-30%;
+            margin-bottom:7px;
+        }
+
+            .detail-box{
+             margin-left:30px;
+             margin-right:30px;
+
+            }
+             .post {
+            background-color: rgb(240, 240, 240);
+            color: #333;
+            border: 1px #333 solid;
+            margin-left:2%;
+            margin-right:0%;
+             }
+             .nav-item{
+            float:none;
+            margin-left:0px;
+        }
+        .active{
+            margin-left:0px;
+        }
+         }
+
+            }
+
+
+    </style>
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="{% static 'images/hero-bg.png' %}" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+        <!-- header section strats -->
+     <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <span>
+              TrustAllianceNG
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+                {% if request.user.username %}
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'userpage' %}"> {{ request.user.username }}</a>
+              </li>
+
+              {% else %}
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'log' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'newacc' %}">Create new user</a>
+              </li>
+              {% endif %}
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+   <div>
+
+     <form  method="POST" action='search' class="form" style="margin-left:5px; margin-top:20px;">
+         {%csrf_token %}
+        <input type="text" id="search" name="q"  style="border-radius: 5px; border:1px #333 solid; font-size:12px; height:25px; width:200px" placeholder="Search by State or Speciality" required>
+        <button type="submit" style="font-size:14px; background-color: rgb(240, 240, 240); border-radius: 5px; border:1px #333 solid;">Search</button>
+    </form>
+  </div>
+  <div>
+       <form  method="POST">
+      {%csrf_token %}
+    <!-- Dropdown menu -->
+    <label for="dropdown">Choose an option to search workers:</label>
+    <select id="dropdown" name="query">
+      <option   value=" fullstack">Fullstack Developer</option>
+      <option   value=" developer">Web Developer</option>
+      <option   value=" frontend">Frontend Developer</option>
+      <option   value=" Content">Content Creator</option>
+      <option   value=" Graphic">Graphics Design</option>
+      <option  value=" App">Mobile App Developer</option>
+      <option   value=" teach">Tutor</option>
+      <option   value=" Coding">Coding Tutor</option>
+      <option  value=" video">Video Editor</option>
+      <option   value=" python">Python Developer</option>
+      <option  value=" Data">Data Analyst</option>
+      <option   value=" Logistics">Logistics and Transportation</option>
+      <option   value=" register">Registration</option>
+
+
+    </select>
+    <br><br>
+
+     <input type="submit" value="Search">
+
+  </form>
+  </div>
+   <div>
+        </p>
+              <a href="{% url 'work' %}"><Button class="post">Post Your Work</Button></a>
+                <a href="{% url 'service' %}"><Button class="post">Post A Job</Button></a>
+              </p>
+
+   </div>
+
+  <!-- why section -->
+
+
+
+
+
+
+
+
+ <div class="row">
+
+
+
+  <form>
+  {% for x in job %}
+  {% if x.verified == True %}
+  <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="" alt="">
+              </div>
+              <div class="detail-box">
+
+                      <p>
+                          Name: {{x.firstname}} {{x.lastname}}
+                  </p>
+
+                  <p>Speciality: {{x.speciality}}</p>
+                       Description: {{x.description}}
+                  <p> Current Profession: {{x.job}}</p>
+                   Price per Job : {{x.price}}
+                 <p> State: {{x.state}} </p>
+
+
+
+
+
+                <a href="{{x.id}}">Contact</a>
+             <button class="butto" style=" background-color: rgb(0%, 0%, 45.5%);  color:#fff; border: 1px #fff solid; margin-right:20px;  border-radius: 5px;"><a href="{% url 'certified' %}">Certified</a></button> </span>
+
+              </p>
+
+
+     {% endif %}
+              </div>
+            </div>
+          </div>
+
+
+   {% endfor %}
+ </form>
+
+
+   <form>
+  {% for x in verified %}
+
+  <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="" alt="">
+              </div>
+              <div class="detail-box">
+
+                      <p>
+                          Username: {{x.username}}
+                  </p>
+
+                  <p>Speciality: {{x.speciality}}</p>
+                       Description: {{x.description}}
+                  <p> Current Profession: {{x.job}}</p>
+                   Price per Job : {{x.price}}
+                 <p> State: {{x.state}} </p>
+
+
+
+
+
+
+                <a href="{{x.id}}">Contact</a>
+
+              </p>
+
+
+              </div>
+            </div>
+          </div>
+
+
+   {% endfor %}
+ </form>
+  <form>
+  {% for x in job %}
+    <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="" alt="">
+              </div>
+              <div class="detail-box">
+
+                      <p>
+                          Name: {{x.firstname}} {{x.lastname}}
+                  </p>
+
+                  <p>Speciality: {{x.speciality}}</p>
+                       Description: {{x.description}}
+                  <p> Current Profession: {{x.job}}</p>
+                   Price per Job : {{x.price}}
+                 <p> State: {{x.state}} </p>
+
+
+
+
+                <a href="{{x.id}}">Contact</a>
+              </p>
+
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+   {% endfor %}
+ </form>
+
+</div>
+  <!-- end why section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +2347011664980
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                   daropaleb@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+              TrustallianceNg is a unique website that allows users to Create Ads, Auction Items, Invest in Businesses and Recruit Workers.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="active" href="index.html">
+                Home
+              </a>
+              <a class="" href="about.html">
+                About
+              </a>
+              <a class="" href="service.html">
+                Services
+              </a>
+              <a class="" href="why.html">
+                Why Us
+              </a>
+              <a class="" href="team.html">
+                Team
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Subscribe to our Newsletter
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="#">Created by Bolaji</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
