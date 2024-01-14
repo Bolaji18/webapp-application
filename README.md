@@ -5,4 +5,4 @@ the web app allows for the posting of job opportunities
 it also allows easy communication between employees and employers 
 the web app is located at 
 http://bolajiolu.pythonanywhere.com/
-https://trustallianceng.com/
+
