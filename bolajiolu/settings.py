@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 import os
 from django.urls import reverse_lazy
@@ -85,8 +85,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+DATABASES["default"] = dj_database_url.parse("postgres://bjdaropalem_django_user:JhJCX05bZlB8TUJMRRBuIX8uqNvofE9u@dpg-cmpmsq6g1b2c73fcmn70-a.oregon-postgres.render.com/bjdaropalem_django")
 
-#postgres://bjdaropalem_django_user:JhJCX05bZlB8TUJMRRBuIX8uqNvofE9u@dpg-cmpmsq6g1b2c73fcmn70-a.oregon-postgres.render.com/bjdaropalem_django
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
