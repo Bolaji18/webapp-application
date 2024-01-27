@@ -129,9 +129,9 @@ LOGIN_URL = 'log'
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 LOGOUT_URL = reverse_lazy('logout')
-STATIC_URL = '/static'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static')]
-STATIC_ROOT = os.path.join(BASE_DIR, '/static')
+STATIC_URL = '/user/static'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '/user/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, '/user/static')
 
 # Base url to serve media files
 MEDIA_URL = '/images'
