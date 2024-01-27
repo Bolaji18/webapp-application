@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,10 +81,11 @@ WSGI_APPLICATION = 'bolajiolu.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default="postgres://bjdaropalem_django_user:JhJCX05bZlB8TUJMRRBuIX8uqNvofE9u@dpg-cmpmsq6g1b2c73fcmn70-a.oregon-postgres.render.com/bjdaropalem_django",
+        conn_max_age=600
+    )
 }
 DATABASES["default"] = dj_database_url.parse("postgres://bjdaropalem_django_user:JhJCX05bZlB8TUJMRRBuIX8uqNvofE9u@dpg-cmpmsq6g1b2c73fcmn70-a.oregon-postgres.render.com/bjdaropalem_django")
 
